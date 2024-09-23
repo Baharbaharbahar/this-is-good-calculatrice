@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Center the calculator on the screen */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #2c3e50; /* Dark background */
+    font-family: Arial, sans-serif;
+}
+
+form {
+    margin: 0;
+}
+
+/* Calculator layout */
+table {
+    background-color: #1e272e; /* Darker calculator body */
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Calculator display (main and secondary) */
+#cal, #cal2 {
+    width: 100%;
+    height: 50px;
+    border: none;
+    background-color: #34495e;
+    color: white;
+    font-size: 1.5rem;
+    text-align: right;
+    padding-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+/* General button styling */
+input[type="button"], input[type="reset"] {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+/* Numeric buttons (1-9, 0) */
+.as {
+    background-color: #7f8c8d; /* Light grey background */
+    color: #ecf0f1; /* Light text */
+}
+
+.as:hover {
+    background-color: #bdc3c7; /* Lighter on hover */
+}
+
+/* Operator buttons (+, -, *, /, etc.) */
+.tout {
+    background-color: #e74c3c; /* Red background */
+    color: white;
+}
+
+.tout:hover {
+    background-color: #c0392b; /* Darker red on hover */
+}
+
+/* Special buttons (C, AC, =, %) */
+input#ae, input[type="reset"] {
+    background-color: #27ae60; /* Green background for AC and C */
+    color: white;
+}
+
+input#ae:hover, input[type="reset"]:hover {
+    background-color: #2ecc71; /* Lighter green on hover */
+}
+
+input#e {
+    background-color: #2980b9; /* Blue for = button */
+    color: white;
+}
+
+input#e:hover {
+    background-color: #3498db; /* Lighter blue on hover */
+}
+
+/* Active state for button clicks */
+td:active input {
+    background-color: #e74c3c; /* Red flash on click */
+    color: white;
+}
+
+/* Styling for the entire calculator grid */
+td, tr {
+    text-align: center;
+    padding: 0;
+    background-color: #1e272e;
+}
+
+/* Add a small border to the buttons to visually separate them */
+input {
+    border: 2px solid #2c3e50;
+}
+
